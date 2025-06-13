@@ -1,17 +1,12 @@
 #!/bin/bash
 
-source ./name.txt
-parent_dir="submission_reminder_$name"
-# echo $name
-
 # function to start the app
 start_app() {
     echo "Engaging the starting sequence"
-    cd $parent_dir
 
-    if [ -f "./config/confing.env" ]; then
-        source ./config/confing.env
-        echo "Config loaded successfully"
+    if [ -f "./config/config.env" ]; then
+        source ./config/config.env
+        # echo "Config loaded successfully"
         sleep 1
     else 
         echo "[!] Error: encountered problem with config"
@@ -26,13 +21,16 @@ start_app() {
     fi
 
     if [ -x "./app/reminder.sh" ]; then
-        source ./app/reminder.sh
         echo "App loaded successfully"
         sleep 1
     else 
         echo "[!] Error: encountered problem with app"
         echo "Hint: Execution permission not granted"
     fi
+
+    echo "--------------------------------------------"
+
+    source ./app/reminder.sh
 }
 
 start_app

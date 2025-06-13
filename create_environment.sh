@@ -6,9 +6,7 @@ read -p "What is your name? " name
 # Creates the directory name according to the username
 echo "name=$name" > name.txt # stores the app name into an external file
 parent_dir="submission_reminder_$name"
-# export startup_dir="$parent_dir"
 
-# file_name=("reminder.sh" "functions.sh" "submissions.txt" "config.env")
 dir_list=("app" "modules" "assets" "config")
 file_name=("reminder.sh" "functions.sh" "submissions.txt" "config.env")
 
@@ -16,8 +14,8 @@ for (( i=0 ; i < 4 ; i++ )); do
     mkdir -p $parent_dir/${dir_list[i]}
 done
 sleep 1
-echo "Parent directory created successfully"
-echo ""
+echo "Parent directories created successfully"
+echo "--------------------------------------------"
 
 for (( i=0 ; i < 4 ; i++ )); do 
     echo "Copying ${file_name[i]} to ${parent_dir}/${dir_list[i]}"
@@ -42,7 +40,7 @@ echo "Nikola, Shell Navigation, submitted"
 
 
 echo "The setup files have been created successfully"
-echo ""
+echo "--------------------------------------------"
 sleep 1
 
 
