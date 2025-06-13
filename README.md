@@ -25,7 +25,7 @@ This project utilizes the following programming languages and technologies:
 
 1. Clone this repository into your local linux system 
 ```
-git clone https://github.com/tokiniainaDisainesubmission_reminder_app_tokiniainaDisaine.git
+git clone https://github.com/tokiniainaDisaine/submission_reminder_app_tokiniainaDisaine.git
 ```
 2. Run the `create_environment.sh` file
 ```
