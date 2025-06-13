@@ -24,19 +24,26 @@ This project utilizes the following programming languages and technologies:
 ### Exciting part
 
 1. Clone this repository into your local linux system 
-```git clone https://github.com/tokiniainaDisainesubmission_reminder_app_tokiniainaDisaine.git```
+```
+git clone https://github.com/tokiniainaDisainesubmission_reminder_app_tokiniainaDisaine.git
+```
 2. Run the `create_environment.sh` file
-```./create_environment.sh```
+```
+./create_environment.sh
+```
 3. Follow the prompt instructions
-4. Go to the `"submission_reminder_{promptedName}`
+4. Go to the `submission_reminder_{promptedName}` directory
 5. Run the startup or the reminder script
 ```
 ./startup.sh 
 ./app/reminder.sh
 ```
 6. To change the assignment:
-    - Go to the main directory `submission_reminder_app_tokiniainaDisaine`
+    - Return to the main directory `submission_reminder_app_tokiniainaDisaine`
     - Run the `copilot_shell_script.sh` file
-    ```./copilot_shell_script.sh```
+    ```
+    ./copilot_shell_script.sh
+    ```
     - Follow the prompt
-7. Have fun
+    - Go back to step-4 and 5
+7. Have fun 🙃
