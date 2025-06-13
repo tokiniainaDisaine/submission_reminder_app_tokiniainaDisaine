@@ -1,4 +1,4 @@
-😎 Handle medical data like a pro
+😎 Never miss an assignment again
 
 # submission_reminder_app_tokiniainaDisaine
 
