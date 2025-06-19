@@ -35,6 +35,7 @@ git clone https://github.com/tokiniainaDisaine/submission_reminder_app_tokiniain
 4. Go to the `submission_reminder_{promptedName}` directory
 5. Run the startup or the reminder script
 ```
+# Use the one that you like 
 ./startup.sh 
 ./app/reminder.sh
 ```

@@ -2,15 +2,18 @@
 
 # Prompts the user for their name
 read -p "What is your name? " name
+sleep 1
 
 # Creates the directory name according to the username
 echo "name=$name" > name.txt # stores the app name into an external file
 parent_dir="submission_reminder_$name"
 
+# List of directories and files
 dir_list=("app" "modules" "assets" "config")
 file_name=("reminder.sh" "functions.sh" "submissions.txt" "config.env")
 
-for (( i=0 ; i < 4 ; i++ )); do 
+# Creates the necessary directories and files
+for (( i=0 ; i < 4 ; i++ )); do
     mkdir -p $parent_dir/${dir_list[i]}
     touch ${parent_dir}/${dir_list[i]}/${file_name[i]}
 
@@ -84,10 +87,10 @@ DAYS_REMAINING=2' > $parent_dir/config/config.env
 
 
 # Populate the startup file
-#!/bin/bash
+echo '#!/bin/bash
 
 # function to start the app
-echo 'start_app() {
+start_app() {
     echo "Engaging the starting sequence"
 
     if [ -f "./config/config.env" ]; then
@@ -121,7 +124,8 @@ echo 'start_app() {
 
 start_app' > $parent_dir/startup.sh
 
-chmod +x $parent_dir/startup.sh
+# Grants execution access to the startup file
+chmod +x $parent_dir/startup.sh 
 
 
 # cp files/startup.sh ${parent_dir}
